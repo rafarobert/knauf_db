@@ -2,8 +2,8 @@
 -- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: https://knauf-dev.processmaker.com
--- Generation Time: Oct 29, 2019 at 11:10 AM
+-- Host: localhost
+-- Generation Time: Nov 01, 2019 at 04:00 PM
 -- Server version: 5.6.45
 -- PHP Version: 5.6.40
 
@@ -43,6 +43,7 @@ CREATE TABLE `GROUPWF` (
 
 INSERT INTO `GROUPWF` (`GRP_UID`, `GRP_TITLE`, `GRP_STATUS`, `GRP_LDAP_DN`, `GRP_UX`, `GRP_ID`) VALUES
 ('1956496045db28968c3b211056130902', 'MGR-APAC', 'ACTIVE', '', 'NORMAL', 17),
+('2309463415db92064bb2d26053687192', 'MGR-APAC-VNM', 'ACTIVE', '', 'NORMAL', 23),
 ('2331482745da7f373e6a5b3059330614', 'APAC-TWN', 'ACTIVE', '', 'NORMAL', 11),
 ('2603819515c89056cbef040052399911', 'APAC', 'ACTIVE', '', 'NORMAL', 1),
 ('2980324345da7f398ac5769035836974', 'APAC-KOR', 'ACTIVE', '', 'NORMAL', 15),
@@ -50,14 +51,19 @@ INSERT INTO `GROUPWF` (`GRP_UID`, `GRP_TITLE`, `GRP_STATUS`, `GRP_LDAP_DN`, `GRP
 ('3688942675da7f08de8ca43055488326', 'Global Administrators', 'ACTIVE', '', 'NORMAL', 8),
 ('4441378875da7f38daf7792017402818', 'APAC-SGP', 'ACTIVE', '', 'NORMAL', 14),
 ('45980492056cf9790aca9c2049280993', 'Administration', 'ACTIVE', '', 'NORMAL', 3),
+('4760302245db9205848f672087966354', 'MGR-APAC-THA', 'ACTIVE', '', 'NORMAL', 22),
 ('4956488575da7f0b7e46aa9051763511', 'Local Administrators', 'ACTIVE', '', 'NORMAL', 9),
+('5844435975db9204b287510045727202', 'MGR-APAC-IDN', 'ACTIVE', '', 'NORMAL', 20),
 ('6001587415d3fb56f60c9c2092663131', 'APAC-PHI', 'ACTIVE', '', 'NORMAL', 2),
 ('6566021025da7f36c96cae3052927825', 'APAC-HKG', 'ACTIVE', '', 'NORMAL', 10),
 ('7009095245db2877dcc7b20087418944', 'MGR-APAC-AUS', 'ACTIVE', '', 'NORMAL', 16),
 ('7050067355da7f387885c91007362350', 'APAC-VNM', 'ACTIVE', '', 'NORMAL', 13),
+('8183993505db92051bbf445050295828', 'MGR-APAC-PHI', 'ACTIVE', '', 'NORMAL', 21),
+('9090797865db9201aebbd57026359664', 'MGR-APAC-CHN', 'ACTIVE', '', 'NORMAL', 18),
 ('9470677725d886eac93d038050244466', 'APAC-CHN', 'ACTIVE', '', 'NORMAL', 6),
 ('9555860125da7f37e36ef85049327902', 'APAC-THA', 'ACTIVE', '', 'NORMAL', 12),
-('9809725535d5367f2d8d067036555873', 'APAC-IDN', 'ACTIVE', '', 'NORMAL', 4);
+('9809725535d5367f2d8d067036555873', 'APAC-IDN', 'ACTIVE', '', 'NORMAL', 4),
+('9830219265db9204223e997061926020', 'MGR-APAC-SEA', 'ACTIVE', '', 'NORMAL', 19);
 
 -- --------------------------------------------------------
 
@@ -483,7 +489,14 @@ INSERT INTO `GROUP_USER` (`GRP_UID`, `USR_UID`, `GRP_ID`) VALUES
 ('1956496045db28968c3b211056130902', '2174546835dafb4b1987ab1080791711', 17),
 ('1956496045db28968c3b211056130902', '2353418135dafb459865c83022628467', 17),
 ('1956496045db28968c3b211056130902', '7610292385c86612287c860012103391', 17),
-('1956496045db28968c3b211056130902', '9733734955bda5957591b88026488524', 17);
+('1956496045db28968c3b211056130902', '9733734955bda5957591b88026488524', 17),
+('9090797865db9201aebbd57026359664', '2381908305d899619115686069376368', 18),
+('9090797865db9201aebbd57026359664', '3173011715d8c1e9e123911076914764', 18),
+('9090797865db9201aebbd57026359664', '7175403755d89d72e3ef028062642819', 18),
+('9090797865db9201aebbd57026359664', '8328875875d8c1e392af352027907764', 18),
+('9830219265db9204223e997061926020', '2111915495d3fdaa6c7bfd2052497434', 19),
+('9830219265db9204223e997061926020', '6275750785d3fdb62451f08022724475', 19),
+('5844435975db9204b287510045727202', '3065051765d5365636020f4090660944', 20);
 
 -- --------------------------------------------------------
 
@@ -1025,7 +1038,7 @@ INSERT INTO `USERS` (`USR_UID`, `USR_ID`, `USR_USERNAME`, `USR_PASSWORD`, `USR_F
 ('1796483685da67cd7c463a2039276070', 133, 'malcom.burkby', '00000000000000000000000000000000', 'Malcolm', 'Burkby', 'malcolm.burkby@knauf.com.au', '2020-10-16', '2019-10-16 02:13:43', '2019-10-16 02:13:43', 'ACTIVE', 'AU', 'VI', 'ATO', '', '', '', '', '', '', '', '', '2019-10-16', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/New_York', 'en', NULL),
 ('1838388015d8c32e3cf06a3047133942', 106, 'guoyan.fu', '00000000000000000000000000000000', 'Guoyan', 'Fu', 'fuguoyan@mail.knauf.com.cn', '2020-09-26', '2019-09-26 03:39:15', '2019-10-23 05:38:59', 'ACTIVE', 'CN', '', '', '', '', '', '', '', '', '', '', '2019-09-26', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Shanghai', 'zh', NULL),
 ('1869611455cdfce632a2279014922776', 23, '', 'af2bdbe1aa9b6ec1e2ade1d694f41fc71a831d0268e9891562113d8a62add1bf', 'Jane', 'Doe', 'jayke.anderson@knauf.com.au', '2019-05-30', '2019-05-18 09:20:35', '2019-05-18 09:20:35', 'CLOSED', '', '', '', '', '', '', '', '', '', '', '', '2019-05-18', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, '', '', NULL),
-('1989991545bda55b6d10632082797630', 3, 'kevin.armstrong', 'af2bdbe1aa9b6ec1e2ade1d694f41fc71a831d0268e9891562113d8a62add1bf', 'Kevin', 'Armstrong', 'Armstrong.Kevin@knauf.co.th', '2019-11-01', '2018-11-01 01:24:06', '2019-10-29 01:55:55', 'ACTIVE', 'TH', '', 'BKK', '', '', '', '', '', '', '', '', '2018-11-01', 'PROCESSMAKER_ADMIN', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Bangkok', 'en', '2019-10-29 01:55:55'),
+('1989991545bda55b6d10632082797630', 3, 'kevin.armstrong', 'af2bdbe1aa9b6ec1e2ade1d694f41fc71a831d0268e9891562113d8a62add1bf', 'Kevin', 'Armstrong', 'Armstrong.Kevin@knauf.co.th', '2019-11-01', '2018-11-01 01:24:06', '2019-11-01 04:16:11', 'ACTIVE', 'TH', '', 'BKK', '', '', '', '', '', '', '', '', '2018-11-01', 'PROCESSMAKER_ADMIN', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Bangkok', 'en', '2019-11-01 04:16:11'),
 ('2049337045d56668f73de37027302004', 77, 'hendra', '00000000000000000000000000000000', 'Hendra', '.', 'Hendra.H@knauf.co.id', '2020-08-16', '2019-08-16 08:17:19', '2019-10-23 05:48:48', 'ACTIVE', 'ID', '', '', '', '', '', '', '', '', '', '', '2019-08-16', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Jakarta', 'in', NULL),
 ('2074846145d8c312805b846015816119', 103, 'sheng.wei', '00000000000000000000000000000000', 'Sheng', 'Wei', 'weisheng@mail.knauf.com.cn', '2020-09-26', '2019-09-26 03:31:52', '2019-10-23 05:42:31', 'ACTIVE', 'CN', '', '', '', '', '', '', '', '', '', '', '2019-09-26', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Shanghai', 'zh', NULL),
 ('2085756345d8c33d2b783f6053895586', 108, 'zhenyong.liu', '00000000000000000000000000000000', 'Zhenyong', 'Liu', 'liuzhenyong@mail.knauf.com.cn', '2020-09-26', '2019-09-26 03:43:14', '2019-10-23 05:45:40', 'ACTIVE', 'CN', '', '', '', '', '', '', '', '', '', '', '2019-09-26', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Shanghai', 'zh', NULL),
@@ -1054,14 +1067,14 @@ INSERT INTO `USERS` (`USR_UID`, `USR_ID`, `USR_USERNAME`, `USR_PASSWORD`, `USR_F
 ('3271758435d3fb41606e330094073909', 44, 'rachel.aldovino', '00000000000000000000000000000000', 'Rachel', 'Aldovino', 'Aldovino.Rachel@knauf.com.ph', '2020-07-30', '2019-07-30 03:05:58', '2019-10-04 09:57:31', 'ACTIVE', 'PH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Manila', 'en', NULL),
 ('3331645055da681b837ef29023967870', 163, 'joe.mori', '00000000000000000000000000000000', 'Joe', 'Mori', 'joe.mori@knauf.com.au', '2020-10-16', '2019-10-16 02:34:32', '2019-10-16 02:34:32', 'ACTIVE', 'AU', 'QL', 'BLG', '', '', '', '', '', '', '', '', '2019-10-16', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/New_York', 'en', NULL),
 ('3379723005d3fb1974f8161050059451', 33, 'jeffrey.rodenas', '7f0300240d0aee1716f258f2e92b7f408e813c89992996647d814c348de11018', 'Jeffrey', 'Rodenas', 'Rodenas.Jeffrey@knauf.com.ph', '2020-07-30', '2019-07-30 02:55:19', '2019-10-04 09:58:07', 'ACTIVE', 'PH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Manila', 'en', '2019-08-01 05:25:10'),
-('3419054305d3fb00f664051020317401', 29, 'exuper.manalo', '9714e2ca440f915e247d94d814f60e8ac4726e4109139c671aa362011708c590', 'Exuper Cleth', 'Manalo', 'Manalo.Exuper@knauf.com.ph', '2020-07-30', '2019-07-30 02:48:47', '2019-10-29 08:34:56', 'ACTIVE', 'PH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Manila', 'en', '2019-10-29 08:34:56'),
+('3419054305d3fb00f664051020317401', 29, 'exuper.manalo', '9714e2ca440f915e247d94d814f60e8ac4726e4109139c671aa362011708c590', 'Exuper Cleth', 'Manalo', 'Manalo.Exuper@knauf.com.ph', '2020-07-30', '2019-07-30 02:48:47', '2019-10-31 03:46:06', 'ACTIVE', 'PH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Manila', 'en', '2019-10-31 03:46:06'),
 ('3524852725d565e0a0239b0007445348', 63, 'yoice.perdanayanti', '00000000000000000000000000000000', 'Yoice', 'Perdanayanti', 'Perdanayanti.Yoice@knauf.co.id', '2020-08-16', '2019-08-16 07:40:58', '2019-10-23 05:52:32', 'ACTIVE', 'ID', '', '', '', '', '', '', '', '', '', '', '2019-08-16', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Jakarta', 'in', NULL),
 ('3553682275d8c30caa5c0c1099848350', 102, 'yin.xu', '00000000000000000000000000000000', 'Yin', 'Xu', 'xuyin@mail.knauf.com.cn', '2020-09-26', '2019-09-26 03:30:18', '2019-10-23 05:44:11', 'ACTIVE', 'CN', '', '', '', '', '', '', '', '', '', '', '2019-09-26', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Shanghai', 'zh', NULL),
 ('3578277445da67c41e92b23066508588', 129, 'silvia.lima', '00000000000000000000000000000000', 'Silvia', 'Lima', 'Silvia.Lima@Knauf.com.au', '2020-10-16', '2019-10-16 02:11:13', '2019-10-16 02:11:13', 'ACTIVE', 'AU', 'QL', 'BDB', '', '', '', '', '', '', '', '', '2019-10-16', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/New_York', 'en', NULL),
 ('3578509695c8f4e2423a989058192977', 15, 'les.triffet', '00000000000000000000000000000000', 'Les', 'Triffet', 'les.triffet@knauf.com.au', '2020-03-18', '2019-03-18 07:52:04', '2019-10-16 04:28:06', 'ACTIVE', '', '', '', 'jayke.anderson@knauf.com.au', '', '', '', '', '', '', '', '2019-03-18', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/Anguilla', 'en', '2019-05-30 22:48:22'),
 ('3598706955d3fae80be9790014842879', 25, 'aristeo.baloja', '00000000000000000000000000000000', 'Aristeo', 'Baloja', 'Perdanayanti.Yoice@knauf.co.id', '2020-07-30', '2019-07-30 02:42:08', '2019-10-04 09:59:55', 'ACTIVE', 'PH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Manila', 'en', NULL),
 ('3673074545d5663a94f3141037191568', 71, 'nikmatulloh.Rifai', '00000000000000000000000000000000', 'Nikmatulloh', 'Rifai', 'Rifai.Nikmatulloh@knauf.co.id', '2020-08-16', '2019-08-16 08:04:57', '2019-10-23 05:50:22', 'ACTIVE', 'ID', '', '', '', '', '', '', '', '', '', '', '2019-08-16', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Jakarta', 'in', NULL),
-('3685603045c8f4dcb1ef9d9059890202', 12, 'kathryn.walker', '00000000000000000000000000000000', 'Kathryn', 'Walker', 'kathryn.walker@knauf.com.au', '2020-03-18', '2019-03-18 07:50:35', '2019-10-16 22:55:59', 'ACTIVE', '', '', '', '', '', '', '', '', '', '', '', '2019-03-18', 'PROCESSMAKER_MANAGER', '', '', 'NORMAL', '0.00', '', '', NULL, 'Antarctica/DumontDUrville', 'en', '2019-10-16 22:55:59'),
+('3685603045c8f4dcb1ef9d9059890202', 12, 'kathryn.walker', '00000000000000000000000000000000', 'Kathryn', 'Walker', 'kathryn.walker@knauf.com.au', '2020-03-18', '2019-03-18 07:50:35', '2019-10-30 05:37:09', 'ACTIVE', '', '', '', '', '', '', '', '', '', '', '', '2019-03-18', 'PROCESSMAKER_MANAGER', '', '', 'NORMAL', '0.00', '', '', NULL, 'Antarctica/DumontDUrville', 'en', '2019-10-30 05:37:09'),
 ('3745184045d3fb23a2f2454076865364', 36, 'rolando.dullavin', '00000000000000000000000000000000', 'Rolando', 'Dullavin', 'Dullavin.Rolando@knauf.com.ph', '2020-07-30', '2019-07-30 02:58:02', '2019-10-04 10:00:50', 'ACTIVE', 'PH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Manila', 'en', NULL),
 ('3762451575daf9060f38901009688967', 177, 'quan.tran', 'e02364ab4d7d50d150db766f60153f9a35c98bdc16fbbd65d46cc5f2a9f4a445', 'Quân', 'Trần Hồng', 'quan.tran@knauf.com.vn', '2020-10-23', '2019-10-22 23:27:28', '2019-10-25 02:36:29', 'ACTIVE', '', '', '', '', '', '', '', '', '', '', '', '2019-10-22', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Ho_Chi_Minh', '', '2019-10-24 07:44:47'),
 ('3824924435da681fab0b2e6095393904', 165, 'michael.thomas', '00000000000000000000000000000000', 'Michael', 'Thomas', 'michael.thomas@knauf.com.au', '2020-10-16', '2019-10-16 02:35:38', '2019-10-16 02:35:38', 'ACTIVE', 'AU', 'QL', 'BLG', '', '', '', '', '', '', '', '', '2019-10-16', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/New_York', 'en', NULL),
@@ -1123,7 +1136,7 @@ INSERT INTO `USERS` (`USR_UID`, `USR_ID`, `USR_USERNAME`, `USR_PASSWORD`, `USR_F
 ('6007216615d89d436cf8357099994899', 86, 'mi.tian', '31af83445fbbdc730cca704f96db0f85ff8d8a899042ce4131e11a054596e351', 'Mi', 'Tian', 'tianmi@mail.knauf.com.cn', '2020-09-24', '2019-09-24 08:30:46', '2019-10-23 05:41:12', 'ACTIVE', 'CN', '', '', '', '', '', '', '', '', '', '', '2019-09-24', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Shanghai', 'zh', '2019-09-25 04:47:12'),
 ('6066674725d89d5bb28f126033248393', 90, 'jun.liang', 'ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f', 'Jun', 'Liang', 'liangjun@mail.knauf.com.cn', '2020-09-24', '2019-09-24 08:37:15', '2019-10-23 05:40:53', 'ACTIVE', 'CN', '', '', '', '', '', '', '', '', '', '', '2019-09-24', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Shanghai', 'zh', '2019-09-27 01:19:43'),
 ('6098984245d896f5da61a74007328013', 81, 'zhongqiu.lu', '7b4ccf4849d0c71c51dade3c7a6afca55d72e9cd7b4d207df3770f300e3addad', 'Zhongqiu', 'Lu', 'luzhongqiu@mail.knauf.com.cn', '2020-09-24', '2019-09-24 01:20:29', '2019-10-23 05:45:53', 'ACTIVE', 'CN', '', '', '', '', '', '', '', '', '', '', '2019-09-24', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Shanghai', 'zh', '2019-09-25 04:05:11'),
-('6146450595d3fb0479da195014124954', 30, 'ronald.lacsamana', '017be0cbe0d440c7b40c39152c41b51cf10d8fcb6f2a8cebbbd0cea273a69a1a', 'Ronald', 'Lacsamana', 'Lacsamana.Ronald@knauf.com.ph', '2020-07-30', '2019-07-30 02:49:43', '2019-10-29 06:55:25', 'ACTIVE', 'PH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Manila', 'en', '2019-10-29 06:55:25'),
+('6146450595d3fb0479da195014124954', 30, 'ronald.lacsamana', '017be0cbe0d440c7b40c39152c41b51cf10d8fcb6f2a8cebbbd0cea273a69a1a', 'Ronald', 'Lacsamana', 'Lacsamana.Ronald@knauf.com.ph', '2020-07-30', '2019-07-30 02:49:43', '2019-10-30 04:35:06', 'ACTIVE', 'PH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Manila', 'en', '2019-10-30 04:35:06'),
 ('6261178115d3fe250ab9443085058305', 55, 'io.sarmiento', '00000000000000000000000000000000', 'Io', 'Sarmiento', 'Sarmiento.Io@knauf.com.ph', '2020-07-30', '2019-07-30 06:23:12', '2019-10-25 04:51:33', 'ACTIVE', 'PH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Bangkok', 'en', '2019-09-10 20:07:10'),
 ('6275750785d3fdb62451f08022724475', 53, 'leo.alarcon', 'af2bdbe1aa9b6ec1e2ade1d694f41fc71a831d0268e9891562113d8a62add1bf', 'Leonel', 'Alarcon', 'Alarcon.Leonel@knauf.co.th', '2020-07-30', '2019-07-30 05:53:38', '2019-10-25 04:52:50', 'ACTIVE', 'TH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_MANAGER', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Bangkok', 'en', NULL),
 ('6285160935dafb1cc7d6402015197250', 194, 'rung.kaewtabtim', '00000000000000000000000000000000', 'Rung', 'Kaewtabtim', 'boardline@knauf.co.th', '2020-10-23', '2019-10-23 01:50:04', '2019-10-23 01:50:04', 'ACTIVE', 'TH', '', '', '', '', '', '', '', '', '', '', '2019-10-23', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/New_York', '', NULL),
@@ -1195,7 +1208,7 @@ INSERT INTO `USERS` (`USR_UID`, `USR_ID`, `USR_USERNAME`, `USR_PASSWORD`, `USR_F
 ('9329725595da67bd4c81857043935341', 128, 'alex.johnson', '00000000000000000000000000000000', 'Alex', 'Johnson', 'alex.johnson@knauf.com.au', '2020-10-16', '2019-10-16 02:09:24', '2019-10-16 02:09:24', 'ACTIVE', 'AU', 'QL', 'BDB', '', '', '', '', '', '', '', '', '2019-10-16', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/New_York', 'en', NULL),
 ('9342741515d56660ab93ae9033986900', 75, 'samuel.hutabarat', '00000000000000000000000000000000', 'Samuel', 'Hutabarat', 'jayke.anderson@knauf.com.au', '2020-08-16', '2019-08-16 08:15:06', '2019-10-23 05:51:12', 'INACTIVE', 'ID', '', '', '', '', '', '', '', '', '', '', '2019-08-16', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Jakarta', 'in', NULL),
 ('9364610835dafb1a68919d7004683424', 193, 'seksan.wangdee', '00000000000000000000000000000000', 'Seksan', 'Wangdee', 'wangdee.seksan@knauf.co.th', '2020-10-23', '2019-10-23 01:49:26', '2019-10-23 01:49:26', 'ACTIVE', 'TH', '', '', '', '', '', '', '', '', '', '', '2019-10-23', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/New_York', '', NULL),
-('9365292815c792b9072fda3097556850', 5, 'dev1pm', '00000000000000000000000000000000', 'Developer1', 'ProcessMaker', 'jayke.anderson@knauf.com.au', '2020-03-01', '2019-03-01 12:54:40', '2019-10-29 01:54:42', 'ACTIVE', '', '', '', 'edgardo@processmaker.com', '', '', '', '', '', '', '', '2019-03-01', 'PROCESSMAKER_ADMIN', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/Anguilla', 'en', '2019-10-29 01:54:42'),
+('9365292815c792b9072fda3097556850', 5, 'dev1pm', '00000000000000000000000000000000', 'Developer1', 'ProcessMaker', 'jayke.anderson@knauf.com.au', '2020-03-01', '2019-03-01 12:54:40', '2019-10-31 15:25:23', 'ACTIVE', '', '', '', 'edgardo@processmaker.com', '', '', '', '', '', '', '', '2019-03-01', 'PROCESSMAKER_ADMIN', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/Anguilla', 'en', '2019-10-31 15:25:23'),
 ('9372259765d3fb29e806798081160447', 37, 'leovino.alvarez', '00000000000000000000000000000000', 'Leovino', 'Alvarez', 'Alvarez.Leovino@knauf.com.ph', '2020-07-30', '2019-07-30 02:59:42', '2019-10-04 09:46:18', 'ACTIVE', 'PH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Manila', 'en', NULL),
 ('9532802645da680cec04a50056308282', 158, 'martin.o\'brien', '00000000000000000000000000000000', 'Martin', 'O\'Brien', 'Martin.O\'Brien@knauf.com.au', '2020-10-16', '2019-10-16 02:30:38', '2019-10-16 04:22:02', 'ACTIVE', 'AU', 'QL', 'BLG', '', '', '', '', '', '', '', '', '2019-10-16', 'PROCESSMAKER_MANAGER', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/New_York', 'en', NULL),
 ('9547519345ca4b60b08cd27063022816', 18, '', '00000000000000000000000000000000', 'test', 'test', 'jayke.anderson@knauf.com.au', '2020-04-03', '2019-04-03 13:32:59', '2019-04-03 17:43:34', 'CLOSED', '', '', '', '', '', '', '', '', '', '', '', '2019-04-03', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/New_York', 'en', '2019-04-03 17:37:12'),
@@ -1205,7 +1218,7 @@ INSERT INTO `USERS` (`USR_UID`, `USR_ID`, `USR_USERNAME`, `USR_PASSWORD`, `USR_F
 ('9670424635d3fb5125b9952098291574', 49, 'marco.liwanag', '1786e2b8bfc370b179b2f01f094a08fb7602910b7b677fadb59ce6d968ae67ea', 'Marco Polo', 'Liwanag', 'Liwanag.MarcoPolo@knauf.com.ph', '2020-07-30', '2019-07-30 03:10:10', '2019-10-04 09:45:31', 'ACTIVE', 'PH', '', '', '', '', '', '', '', '', '', '', '2019-07-30', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Manila', 'en', '2019-08-02 05:52:49'),
 ('9688651985c9287fd6dd871096977822', 16, '', '00000000000000000000000000000000', 'Crystal', 'Wendel', 'jayke.anderson@knauf.com.au', '2020-03-20', '2019-03-20 18:35:41', '2019-10-04 09:44:23', 'CLOSED', '', '', '', 'jayke.anderson@knauf.com.au', '', '', '', '', '', '', '', '2019-03-20', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Antarctica/DumontDUrville', 'en', '2019-09-05 03:00:51'),
 ('9718428045d89d5ff633628034005749', 91, 'densen.zu', '00000000000000000000000000000000', 'Densen', 'Zu', 'zudesen@mail.knauf.com.cn', '2020-09-24', '2019-09-24 08:38:23', '2019-10-23 05:38:26', 'ACTIVE', 'CN', '', '', '', '', '', '', '', '', '', '', '2019-09-24', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Shanghai', 'zh', NULL),
-('9733734955bda5957591b88026488524', 4, 'jayke.anderson', 'af2bdbe1aa9b6ec1e2ade1d694f41fc71a831d0268e9891562113d8a62add1bf', 'Jayke', 'Anderson', 'jayke.anderson@knauf.com.au', '2019-11-01', '2018-11-01 01:39:35', '2019-10-24 23:42:42', 'ACTIVE', 'AU', 'QL', 'BNE', 'jayke.anderson@knauf.com.au', '', '', '', '', '', '', '', '2018-11-01', 'PROCESSMAKER_ADMIN', '', '', 'NORMAL', '0.00', '', '', NULL, 'Antarctica/DumontDUrville', 'en', '2019-10-24 23:42:42'),
+('9733734955bda5957591b88026488524', 4, 'jayke.anderson', 'af2bdbe1aa9b6ec1e2ade1d694f41fc71a831d0268e9891562113d8a62add1bf', 'Jayke', 'Anderson', 'jayke.anderson@knauf.com.au', '2019-11-01', '2018-11-01 01:39:35', '2019-10-31 11:12:59', 'ACTIVE', 'AU', 'QL', 'BNE', 'jayke.anderson@knauf.com.au', '', '', '', '', '', '', '', '2018-11-01', 'PROCESSMAKER_ADMIN', '', '', 'NORMAL', '0.00', '', '', NULL, 'Antarctica/DumontDUrville', 'en', '2019-10-31 11:12:59'),
 ('9750851565da67f93a138d6092722198', 150, 'pim.calkhoven', '00000000000000000000000000000000', 'Pim', 'Calkhoven', 'pim.calkhoven@knauf.com.au', '2020-10-16', '2019-10-16 02:25:23', '2019-10-16 02:25:23', 'ACTIVE', 'AU', '', '', '', '', '', '', '', '', '', '', '2019-10-16', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/New_York', 'en', NULL),
 ('9797748935da67cb12dcc75039479432', 132, 'annette.bisinella', '00000000000000000000000000000000', 'Annette', 'Bisinella', 'annette.bisinella@knauf.com.au', '2020-10-16', '2019-10-16 02:13:05', '2019-10-16 02:13:05', 'ACTIVE', 'AU', 'VI', 'ATO', '', '', '', '', '', '', '', '', '2019-10-16', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'America/New_York', 'en', NULL),
 ('9803445305d89d47bc64b09062203223', 87, 'yu.liu', '00000000000000000000000000000000', 'Yu', 'Liu', 'liuyu@mail.knauf.com.cn', '2020-09-24', '2019-09-24 08:31:55', '2019-10-23 05:45:10', 'ACTIVE', 'CN', '', '', '', '', '', '', '', '', '', '', '2019-09-24', 'PROCESSMAKER_OPERATOR', '', '', 'NORMAL', '0.00', '', '', NULL, 'Asia/Shanghai', 'zh', NULL),
@@ -1490,7 +1503,7 @@ ALTER TABLE `USERS_PROPERTIES`
 -- AUTO_INCREMENT for table `GROUPWF`
 --
 ALTER TABLE `GROUPWF`
-  MODIFY `GRP_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `GRP_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `USERS`
